@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🎵 Mi Reproductor Musical</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎶 Reproductor Musical</h1>
+        <div class="controls">
+            <input type="text" id="buscar" placeholder="🔍 Buscar canción...">
+            <button onclick="buscarCanciones()">🔍 Buscar</button>
+            <button onclick="cargarCanciones()">📂 Cargar</button>
+            <button onclick="mostrarFavoritos()">⭐ Favoritos</button>
+            <button onclick="mostrarHistorial()">🕘 Historial</button>
+        </div>
+        <div class="agregar">
+            <h2>➕ Agregar Canción</h2>
+            <input type="text" id="nombre" placeholder="🎵 Nombre">
+            <input type="text" id="artista" placeholder="🎤 Artista">
+            <input type="number" id="year" placeholder="📅 Año">
+            <input type="number" id="duracion" placeholder="⏱ Duración (ms)">
+            <button onclick="agregarCancion()">✅ Agregar</button>
+        </div>
+        <ul id="lista-canciones"></ul>
+
+        <!-- Lista de favoritos visual -->
+        <div id="lista-favoritos" style="display:none;">
+            <h2>⭐ Canciones Favoritas</h2>
+            <ul id="favoritos-lista"></ul>
+        </div>
+
+        <!-- Botones Adelante / Atrás -->
+        <div class="navegacion">
+            <button onclick="cancionAnterior()">⬅ Anterior</button>
+            <button onclick="cancionSiguiente()">Siguiente ➡</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
